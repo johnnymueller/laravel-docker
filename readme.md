@@ -6,7 +6,10 @@ Based on the tutorial here: https://www.toptal.com/laravel/restful-laravel-api-t
 
 Log in to DB and create user:
 ```
+docker-compose up -d
+
 docker exec -it [NAME_OF_MYSQL_CONTAINER] bash;
+
 mysql -uroot -psecret;
 
 CREATE USER 'homestead'@'%' IDENTIFIED BY 'secret';
@@ -16,9 +19,10 @@ GRANT ALL PRIVILEGES ON * . * TO 'homestead'@'%';
 Install, migrate, seed, and spin up Docker:
 
 1. `composer install`
+2. `cp .env.example .env`
+3. `php artisan key:generate`
 2. `php artisan migrate`
 3. `php artisan db:seed`
-4. `docker-compose up -d`
 
 API is served at `localhost:8080`. Postman helps and make sure to send the following headers:
 `Accept: application/json`
