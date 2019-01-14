@@ -21,8 +21,9 @@ Install, migrate, seed, and spin up Docker:
 1. `composer install`
 2. `cp .env.example .env`
 3. `php artisan key:generate`
-2. `php artisan migrate`
-3. `php artisan db:seed`
+4. `php artisan migrate`
+5. `php artisan db:seed`
+6. `php artisan key:generate`
 
 API is served at `localhost:8080`. Postman helps and make sure to send the following headers:
 `Accept: application/json`
