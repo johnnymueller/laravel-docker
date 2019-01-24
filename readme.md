@@ -4,18 +4,6 @@ Based on the tutorial here: https://www.toptal.com/laravel/restful-laravel-api-t
 
 ## Installation
 
-Log in to DB and create user:
-```
-docker-compose up -d
-
-docker exec -it [NAME_OF_MYSQL_CONTAINER] bash;
-
-mysql -uroot -psecret;
-
-CREATE USER 'homestead'@'%' IDENTIFIED BY 'secret';
-GRANT ALL PRIVILEGES ON * . * TO 'homestead'@'%';
-```
-
 Install, migrate, seed, and spin up Docker:
 
 1. `composer install`
